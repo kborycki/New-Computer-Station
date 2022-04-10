@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bgc-color:#161721;
+    --text-color: #f9f9f9;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color:var(--text-color);
+    background-color:var(--bgc-color);
+    overflow-x: none;
+}
+
+section{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+.add-item-panel{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    border:solid white 1px;
+    padding: 0 10px 20px;
+    margin:50px 0;
+
+    h2{
+        text-align:center;
+        padding:20px 0;
+    }
+
+    .input_field{
+        display:flex;
+        justify-content:space-between;
+        font-size:18px;
+        width:100%;
+        margin:10px;
+
+        input, select{
+            width:180px;
+        }
+        select{
+            text-align:center;
+        }
+    }
+
+    button{
+        width:80%;
+        background-color: #34364E;
+        color:var(--text-color);
+        border-radius:10px;
+        border:none;
+        padding:5px;
+        margin:10px 0;
+        cursor:pointer;
+
+        &:hover{
+            background-color: #2c2d3f;
+        }
+    }
+    
+}
+
+.items_list{
+
+    border: solid white 1px;
+    width:80%;
+    .item_area{
+
+        table{
+            display:flex;
+            flex-direction: column;
+            
+            .table_heading{
+                font-size:16px;
+                font-weight:bold;
+                background-color: #34364E;
+            }
+            tr{
+                display:flex;
+                flex-direction: row;
+                justify-content:space-around;
+               
+            }
+            td, th{
+                border:solid white 1px;
+                min-width: 20%;
+                min-height:100%;
+                padding:10px 10px;
+                text-align: center;
+                line-height: 60px;
+                word-break: break-all;
+            }
+        }
+
+
+        .fa-pen { 
+            cursor:pointer;
+            &:hover{
+                color: #f4e508;
+            } }
+        .fa-trash { 
+            cursor:pointer;
+
+            &:hover{
+                color: #dc2926;
+            }}
+        }
+    
+        .items_summary{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            margin:20px;
+        }
+}
+
+.export_btns{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    padding:20px 0;
+    
+    
+
+    .export_btn{
+        color:var(--text-color);
+        text-transform: uppercase;
+        padding:10px;
+        margin:0 10px;
+        border:none;
+        border-radius: 5px;
+        background-color: #34364E;
+        cursor:pointer;
+        &:hover{
+            background-color: #2c2d3f;
+        }
+    }
+}
+
+.popup{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    bottom:30%;
+    left:50%;
+    transform: translateX(-50%);
+    width: 80%;
+    background-color: var(--bgc-color);
+    color:var(--text-color);
+    border:solid white 1px;
+
+    h3{
+        padding: 20px;
+    }
+
+    .popup-info{
+        margin-bottom: 20px;
+    }
+    .popup-body{
+        display: flex;
+        justify-content: center;
+        flex-wrap:wrap;
+        width: 90%;
+        padding: 10px;
+    }
+    .popup-input{ 
+       width: 100%;
+       padding: 10px 20px;
+       margin:10px;
+       border:none; 
+       border-radius:5px;
+    }
+
+    .popup-btn{
+        display: inline-block;
+        width: 30%;
+        text-align: center;
+        padding:10px 20px;
+        margin:20px;
+        border:none;
+        border-radius: 5px;
+        background-color: #34364E;
+        color:var(--text-color);
+        cursor:pointer;
+
+        &:hover{
+            background-color: #2c2d3f;
+        }
+    }
+    
+}
+@media screen and (max-width: 740px) {
+
+      tr, td, th{
+        display: flex;
+        flex-flow: row wrap;
+        width:100%;
+        justify-content: center;
+    }
+    td:first-child{
+        background-color: rgb(40, 41, 49);
+    }
+}
